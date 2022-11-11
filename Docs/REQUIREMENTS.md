@@ -25,12 +25,9 @@
 ### Refinamento da agenda
 - R.13 O sistema deve permitir que secretários adiem os horários agendados ou confirmados dos pacientes. (E)
 - R.13.1. Os horários adiados deverão ser confirmados novamente de acordo com o requisito 2. (E)
-
 - R.14 O sistema deve impedir o agendamento de horários durante o período de férias do médico. (E)
 - R.14.1 O período de férias deve ser determinado com 60 dias de antecedência e informado pelo secretário. (E)
-
 - R.15 O sistema deve permitir que os secretários informem o horário de entrada e saída das consultas dos pacientes. (E)
-
 - R.16 O sistema deve permitir que os secretários permitam o encaixe de pacientes. (E)
 - R.16.1 O encaixe deverá permitir que dois pacientes ocupem o mesmo horário num mesmo dia, caso o médico esteja com o horário de consultas adiantado. (E)
 - R.16.2 Um médico está com o horário de consultas adiantado, caso a saída do paciente ocorreu antes do horário de entrada do próximo paciente. (E)

@@ -8,5 +8,4 @@
 - Programador: [Guilherme Eduardo Silva Batalhoti](https://github.com/GuiBatalhoti)
 
 ### Documentação:
-- [Documento de Requisitos](https://github.com/Team-Dire/university-restaurant/blob/main/docs/REQUIREMENTS.md)
-- [Casos de Uso](https://github.com/Team-Dire/university-restaurant/blob/main/docs/USE_CASES.md)
+- [Documento de Requisitos](https://github.com/Team-Dire/Sistema-agendamento-clinico/blob/main/Docs/REQUIREMENTS.md)
