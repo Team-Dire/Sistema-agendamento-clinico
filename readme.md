@@ -1,4 +1,4 @@
-# Seja bem-vindo ao Sistema de Restaurante Universitário!
+# Seja bem-vindo ao Sistema de Agendamento Médico!
 
 ### Papéis de cada contribuidor:
 - Gerente: [Gabriel Oya Nozawa](https://github.com/G-Nozawa)
