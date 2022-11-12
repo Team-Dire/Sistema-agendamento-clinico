@@ -6,7 +6,7 @@
 - R.3 O sistema deve permitir que secretários confirmem um horário agendado de um paciente pelo menos 7 dias antes da data agendada. (E)
 - R.4 O sistema deve emitir uma notificação por pop-up aos secretários que possuem consultas agendadas que não foram confirmadas 1 dia útil antes da data agendada. (E)
 - R.5 O sistema deve permitir que os médicos, e seus respectivos secretários, verifiquem os horários agendados de cada paciente. (E)
-- R.6 O sistema deve permitir que os verifiquem seus horários agendados para o dia especificado pelo usuário. (E)
+- R.6 O sistema deve permitir que os médicos, e seus respectivos secretários, verifiquem seus horários agendados para o dia especificado pelo usuário. (E)
 - R.7 O sistema deve permitir que os secretários cancelem as consultas agendadas. (E)
 - R.8 O sistema deve permitir que os secretários verifiquem os horários disponíveis do médico. (E)
 - R.9 O sistema deve permitir que cada médico seja associado a um determinado secretário, podendo um secretário possuir mais de um médico. (E)
