@@ -5,7 +5,7 @@
 
 **Tipo:** Secundário, essencial.
 
-**Descrição:** Um usuário deseja utilizar o software. Ele informa seu nome de usuário e senha. O software verifica se o usuário existe e se a senha está correta. Se estiver, o usuário é autenticado e as funcionalidades do software são liberadas para ele.
+**Descrição:** Um usuário deseja utilizar o software. Ele informa suas credenciais. O software verifica se o usuário existe e se a senha está correta. Se estiver, o usuário é autenticado e as funcionalidades do software são liberadas para ele.
 
 **Referências cruzadas:** R1.
 
@@ -13,11 +13,11 @@
 | Atores | Software |
 | --- | --- |
 | 1. O usuário executa o software | |
-| 2. O usuário insere seu nome de usuário e senha. | 3. O software verifica se o usuário existe e se a senha está correta. |
+| 2. O usuário insere suas credenciais. | 3. O software verifica se o usuário existe e se a senha está correta. |
 | | 4. O software libera as funcionalidades do software de acordo com a categoria do usuário. |
 | 5. O usuário utiliza o software. | |
 
-**Sequência alternativa:**: Linha 3. O software verifica se o usuário existe e se a senha está correta. Se o usuário não existir, o software informa que o nome de usuário não existe. Se a senha estiver incorreta, o software informa que a senha está incorreta.
+**Sequência alternativa:**: Linha 3. O software verifica se as credenciais são válidas. Se o usuário que deseja ser autenticado não existir, o software irá emitir uma notificação sobre isso. 
 
 # Caso de uso: Adicionar um novo usuário ao software.
 **Ator:** Administrador (iniciador da ação).
