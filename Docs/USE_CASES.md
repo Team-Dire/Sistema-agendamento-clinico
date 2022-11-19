@@ -26,7 +26,7 @@
 
 **Tipo:** Secundário, essencial.
 
-**Descrição:** Um administrador deseja adicionar um novo usuário ao software. Ele informa o nome de usuário, senha e categoria do novo usuário. O software verifica se o nome de usuário já existe. Se não existir, o software adiciona o novo usuário ao software.
+**Descrição:** Um administrador deseja adicionar um novo usuário ao software. Ele informa as credenciais e a categoria do novo usuário. O software verifica se o novo usuário já existe. Se não existir, o software adiciona o novo usuário ao software.
 
 **Referências cruzadas:** R1
 
@@ -34,10 +34,10 @@
 | Administrador | Software |
 | --- | --- |
 | 1. O administrador executa o software | |
-| 2. O administrador insere o nome de usuário, senha e categoria do novo usuário. | 3. O software retorna a mensagem "Usuário adicionado com sucesso" |
+| 2. O administrador insere as credenciais do novo usuário. | 3. O software retorna a mensagem "Usuário adicionado com sucesso" |
 | | 4. O software adiciona o novo usuário ao software. |
 
-**Sequência alternativa:**: Linha 3. O software verifica se o nome de usuário já existe. Se existir, o software retorna a mensagem "Nome de usuário já existe".
+**Sequência alternativa:**: Linha 3. O software verifica se o usuário já existe. Se existir, o software retorna a mensagem "Usuário já existente".
 
 # Caso de uso: Associar um secretário a um médico.
 **Ator:** Administrador ou Médico (iniciador da ação).
@@ -46,7 +46,7 @@
 
 **Tipo:** Secundário, essencial.
 
-**Descrição:** Um administrador ou médico deseja associar um secretário a um médico. Ele informa o nome de usuário do médico e do secretário. O software associa o secretário ao médico.
+**Descrição:** Um administrador ou médico deseja associar um secretário a um médico. Ele informa o identificador médico e do secretário. O software associa o secretário ao médico.
 
 **Referências cruzadas:** R9
 
