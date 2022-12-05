@@ -4,6 +4,7 @@
 - R.1 O sistema deve autenticar os usuários e classificá-los em médicos ou secretários. (E)
 - R.1.1 Os sistema deverá armazenar os dados de CPF, senha, nome do usuário, e caso o usuário seja um médico, especialização do médico. (E)
 - R.2 O sistema deve permitir que os secretários agendem consultas com até 60 dias de antecedência, e pelo menos, 30 minutos de antecedência. (E)
+- R.2.1 Cada consulta deve armazenar o CPF e nome do paciente. (E)
 - R.3 O sistema deve permitir que secretários confirmem um horário agendado de um paciente pelo menos 7 dias antes da data agendada. (E)
 - R.4 O sistema deve emitir uma notificação aos secretários que possuem consultas agendadas que não foram confirmadas 1 dia útil antes da data agendada. (E)
 - R.5 O sistema deve permitir que os médicos, e seus respectivos secretários, verifiquem os horários agendados de cada paciente. (E)
