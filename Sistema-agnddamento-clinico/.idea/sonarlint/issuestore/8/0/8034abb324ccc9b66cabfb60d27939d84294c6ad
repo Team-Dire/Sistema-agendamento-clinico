@@ -1,0 +1,18 @@
+
+e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¦ÅL
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°Å’ÿüÿÿÿÿ
+p	java:S116
+"VRename this field "CPFpaciente" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯»£–ýÿÿÿÿ
+1
+java:S3626"Remove this redundant jump.(ûÁÝ…
+G
+java:S1068	",Remove this unused "paciente" private field.(Û Üéÿÿÿÿÿ
+J
+java:S1068
+"/Remove this unused "CPFpaciente" private field.(¯»£–ýÿÿÿÿ
+E
+java:S1068"*Remove this unused "medico" private field.(ýò³âÿÿÿÿÿ
+F
+java:S1068"+Remove this unused "horario" private field.(’­èüûÿÿÿÿ
+I
+java:S1068".Remove this unused "confirmada" private field.(ÝšŒƒøÿÿÿÿ

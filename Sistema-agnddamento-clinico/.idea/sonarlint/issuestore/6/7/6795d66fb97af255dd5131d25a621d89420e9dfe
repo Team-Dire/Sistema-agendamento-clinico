@@ -1,0 +1,10 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(à’Òûüÿÿÿÿ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿ë…Æüÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(‡ ¤—ÿÿÿÿÿ
+W
+java:S1126	"AReplace this if-then-else statement by a single return statement.(ëá«š
+p
+java:S2159	"ZRemove this call to "equals"; comparisons between an array and a type always return false.(ëá«š
