@@ -4,6 +4,8 @@
  */
 package UI;
 
+import Clinica.Clinica;
+
 /**
  *
  * @author Guilherme
@@ -29,6 +31,7 @@ public class UIPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         menuUsuario = new javax.swing.JMenu();
         btnNovoUsuario = new javax.swing.JMenuItem();
+        btnAssociarSecretarioMedico = new javax.swing.JMenuItem();
         menuConsultas = new javax.swing.JMenu();
         btnConfirmarConsulta = new javax.swing.JMenuItem();
         btnNovaConsulta = new javax.swing.JMenuItem();
@@ -49,6 +52,14 @@ public class UIPrincipal extends javax.swing.JFrame {
             }
         });
         menuUsuario.add(btnNovoUsuario);
+
+        btnAssociarSecretarioMedico.setText("Associar Secretário a um Médico");
+        btnAssociarSecretarioMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAssociarSecretarioMedicoActionPerformed(evt);
+            }
+        });
+        menuUsuario.add(btnAssociarSecretarioMedico);
 
         jMenuBar1.add(menuUsuario);
 
@@ -79,18 +90,35 @@ public class UIPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                UIAutenticar dialog = new UIAutenticar(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
+        Clinica clinica = Clinica.getInstance();
+        //caso não exista nenhum usuário
+        if (clinica.getUsuarios().isEmpty()){
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
+                    form.addWindowListener(new java.awt.event.WindowAdapter() {
+                        @Override
+                        public void windowClosing(java.awt.event.WindowEvent e) {
+                            System.exit(0);
+                        }
+                    });
+                    form.setVisible(true);
+                }
+            });
+        }else{
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    UIAutenticar dialog = new UIAutenticar(new javax.swing.JFrame(), true);
+                    dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                        @Override
+                        public void windowClosing(java.awt.event.WindowEvent e) {
+                            System.exit(0);
+                        }
+                    });
+                    dialog.setVisible(true);
+                }
+            });
+        }
     }//GEN-LAST:event_formWindowOpened
 
     private void btnNovoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoUsuarioActionPerformed
@@ -101,6 +129,15 @@ public class UIPrincipal extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_btnNovoUsuarioActionPerformed
+
+    private void btnAssociarSecretarioMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssociarSecretarioMedicoActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                UIAssociarSecretarioMedico dialog = new UIAssociarSecretarioMedico(new javax.swing.JFrame(), true);
+                dialog.setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_btnAssociarSecretarioMedicoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,6 +175,7 @@ public class UIPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem btnAssociarSecretarioMedico;
     private javax.swing.JMenuItem btnConfirmarConsulta;
     private javax.swing.JMenuItem btnNovaConsulta;
     private javax.swing.JMenuItem btnNovoUsuario;

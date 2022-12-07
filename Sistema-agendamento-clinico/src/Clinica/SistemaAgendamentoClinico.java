@@ -2,7 +2,7 @@
  * 
  * 
  */
-package sistema.agendamento.clinico;
+package Clinica;
 
 /**
  *

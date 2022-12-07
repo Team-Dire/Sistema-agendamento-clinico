@@ -71,7 +71,7 @@ public class UIAdicionarUsuario extends javax.swing.JDialog {
         labelTipoUsuario.setText("Tipo de usário*:");
         getContentPane().add(labelTipoUsuario);
 
-        inputTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Médico", "Secretário" }));
+        inputTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Médico", "Secretário", "Administrador" }));
         inputTipoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputTipoUsuarioActionPerformed(evt);
@@ -127,6 +127,7 @@ public class UIAdicionarUsuario extends javax.swing.JDialog {
         }
         
         JOptionPane.showMessageDialog(null, "Usuário registrado!");
+        this.setVisible(false);
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void inputTipoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTipoUsuarioActionPerformed

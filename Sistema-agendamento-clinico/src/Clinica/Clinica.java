@@ -2,7 +2,7 @@
  * 
  * 
  */
-package sistema.agendamento.clinico;
+package Clinica;
 
 import Consulta.Consulta;
 import java.util.ArrayList;
@@ -16,11 +16,11 @@ import user.Usuario;
  */
 public class Clinica {
     
-    private static final Clinica instance = null;
+    private static Clinica instance;
     
     public static Clinica getInstance(){
         if (instance == null){
-            return new Clinica();
+            instance = new Clinica();
         }
         return instance;
     }
@@ -50,7 +50,6 @@ public class Clinica {
         
         Secretario secretario = new Secretario(nomeDeUsuario, senha, cpf);
         this.usuarios.add(secretario);
-
     }
     
     
