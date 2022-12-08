@@ -20,12 +20,16 @@ public class ControladorConsulta {
         Date hoje = new Date();
         
         long diferencaMili = hoje.getTime() - horario.getTime();
-        long diferencaDias = (diferencaMili / (1000*60*60*24)) % 365;
-        long diferencaMin = (diferencaMili / (1000*60)) % 60;
+        long diferencaDias = Math.abs(diferencaMili / (1000*60*60*24) % 365);
+        long diferencaMin = Math.abs((diferencaMili / (1000*60)) % 60);
         
-        if(diferencaDias > 60 || diferencaMin < 30){
+        if(diferencaDias > 60) {
             return false;
         }        
+        if (diferencaMin < 30){
+            return false;
+        }
+
         for (Consulta consultaLoop : clinica.getConsultas()){
             if (consultaLoop.getMedico().getNomeDeUsuario().equals(nomeMedico) && consultaLoop.getHorario().equals(horario)){
                 return false;
@@ -43,7 +47,16 @@ public class ControladorConsulta {
         return true;
     }
     
-    public static boolean cancela(String nomePaciente, String CPFPaciente, String nomeMedico){
+    public static boolean cancela(String nomePaciente, Date horario){
+        
+        Clinica clinica = Clinica.getInstance();
+        for (Consulta cons : clinica.getConsultas()){
+            if (cons.getPaciente().equals(nomePaciente) && cons.getHorario().equals(horario)) {
+                clinica.getConsultas().remove(cons);
+                return true;
+            }
+        }
+        
         return false;
     }
     

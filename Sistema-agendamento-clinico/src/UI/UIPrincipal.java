@@ -87,6 +87,11 @@ public class UIPrincipal extends javax.swing.JFrame {
         menuConsultas.add(btnNovaConsulta);
 
         btnCancelarConsulta.setText("Cancelar Consulta");
+        btnCancelarConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarConsultaActionPerformed(evt);
+            }
+        });
         menuConsultas.add(btnCancelarConsulta);
 
         jMenuBar1.add(menuConsultas);
@@ -175,6 +180,15 @@ public class UIPrincipal extends javax.swing.JFrame {
         Serializa.gravaNoArquivo();
         System.exit(0);
     }//GEN-LAST:event_formWindowClosing
+
+    private void btnCancelarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarConsultaActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                UICancelarConsulta dialog = new UICancelarConsulta(new javax.swing.JFrame(), true);
+                dialog.setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_btnCancelarConsultaActionPerformed
 
     /**
      * @param args the command line arguments

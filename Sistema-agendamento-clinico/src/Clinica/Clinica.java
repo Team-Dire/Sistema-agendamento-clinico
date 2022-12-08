@@ -32,7 +32,7 @@ public class Clinica implements Serializable{
     private ArrayList<Usuario> usuarios;
     private ArrayList<Consulta> consultas;
 
-    public Clinica() {
+    private Clinica() {
         this.usuarios = new ArrayList<>();
         this.consultas = new  ArrayList<>();
     }
