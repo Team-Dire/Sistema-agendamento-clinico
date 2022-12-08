@@ -76,6 +76,11 @@ public class UIPrincipal extends javax.swing.JFrame {
         menuConsultas.setText("Consultas");
 
         btnConfirmarConsulta.setText("Confirmar Consulta");
+        btnConfirmarConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfirmarConsultaActionPerformed(evt);
+            }
+        });
         menuConsultas.add(btnConfirmarConsulta);
 
         btnNovaConsulta.setText("Nova Consulta");
@@ -182,13 +187,18 @@ public class UIPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     private void btnCancelarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarConsultaActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                UICancelarConsulta dialog = new UICancelarConsulta(new javax.swing.JFrame(), true);
-                dialog.setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            UICancelarConsulta dialog = new UICancelarConsulta(new javax.swing.JFrame(), true);
+            dialog.setVisible(true);
         });
     }//GEN-LAST:event_btnCancelarConsultaActionPerformed
+
+    private void btnConfirmarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarConsultaActionPerformed
+        java.awt.EventQueue.invokeLater(() -> {
+            UIConfirmarPaciente dialog = new UIConfirmarPaciente(new javax.swing.JFrame(), true);
+            dialog.setVisible(true);
+        });
+    }//GEN-LAST:event_btnConfirmarConsultaActionPerformed
 
     /**
      * @param args the command line arguments

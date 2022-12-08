@@ -60,7 +60,16 @@ public class ControladorConsulta {
         return false;
     }
     
-    public static boolean confirmar(String nomePaciente, String CPFPaciente, String nomeMedico, Date horario){
+    public static boolean confirmar(String nomePaciente, Date horario){
+        
+        Clinica clinica = Clinica.getInstance();
+        for (Consulta cons : clinica.getConsultas()){
+            if (cons.getPaciente().equals(nomePaciente) && cons.getHorario().equals(horario)) {
+                cons.confirmar();
+                return true;
+            }
+        }
+        
         return false;
     }
 }
