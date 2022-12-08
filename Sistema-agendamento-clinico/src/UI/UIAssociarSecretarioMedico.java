@@ -5,8 +5,10 @@
 package UI;
 
 import Clinica.Clinica;
-import javax.swing.DefaultListModel;
+import Controler.ControladorUsuario;
+import java.util.Vector;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import user.Medico;
 import user.Secretario;
 import user.Usuario;
@@ -35,7 +37,7 @@ public class UIAssociarSecretarioMedico extends javax.swing.JDialog {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        listaSecertarios = new javax.swing.JList<>();
+        listaSecretarios = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         labelMedicos = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -49,7 +51,7 @@ public class UIAssociarSecretarioMedico extends javax.swing.JDialog {
             }
         });
 
-        jScrollPane1.setViewportView(listaSecertarios);
+        jScrollPane1.setViewportView(listaSecretarios);
 
         jLabel1.setText("Seceretário:");
 
@@ -105,24 +107,37 @@ public class UIAssociarSecretarioMedico extends javax.swing.JDialog {
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         Clinica clinica = Clinica.getInstance();
         
-        DefaultListModel modeloSecretarios = new DefaultListModel();
-        DefaultListModel modeloMedicos = new DefaultListModel();
+        Vector<String> nomesSecretarios = new Vector<>();
+        Vector<String> nomesMedicos = new Vector<>();
         
         for (Usuario user : clinica.getUsuarios()){
             if (user instanceof Secretario){
-                modeloSecretarios.addElement(user.getNomeDeUsuario());
+                nomesSecretarios.add(user.getNomeDeUsuario());
             }
             if (user instanceof Medico){
-                modeloMedicos.addElement(user.getNomeDeUsuario());
+                nomesMedicos.add(user.getNomeDeUsuario());
             }
         }
         
-        this.listaMedicos = new JList(modeloMedicos);
-        this.listaSecertarios = new JList(modeloSecretarios);
+        this.listaSecretarios.setListData(nomesSecretarios);
+        this.listaMedicos.setListData(nomesMedicos);
     }//GEN-LAST:event_formWindowActivated
 
     private void btnAssociarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssociarActionPerformed
-        // TODO add your handling code here:
+        String nomeSecretario = this.listaSecretarios.getSelectedValue();
+        String nomeMedico = this.listaMedicos.getSelectedValue();
+        
+        if (nomeSecretario == null || nomeMedico == null){
+            JOptionPane.showMessageDialog(null, "Médico ou Secretário não selecionado!! Por favor selecione!!");
+            return;
+        }
+        
+        if (!ControladorUsuario.associarSecretarioMedico(nomeSecretario, nomeMedico)){
+            JOptionPane.showMessageDialog(null, "Médico já está asssociado a um Seceretário!!");
+            return;
+        }
+        
+        JOptionPane.showMessageDialog(null, "Médico e Seceretário associados com sucesso!!");
     }//GEN-LAST:event_btnAssociarActionPerformed
 
     
@@ -134,6 +149,6 @@ public class UIAssociarSecretarioMedico extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel labelMedicos;
     private javax.swing.JList<String> listaMedicos;
-    private javax.swing.JList<String> listaSecertarios;
+    private javax.swing.JList<String> listaSecretarios;
     // End of variables declaration//GEN-END:variables
 }

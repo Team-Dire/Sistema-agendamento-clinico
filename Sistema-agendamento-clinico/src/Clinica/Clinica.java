@@ -6,6 +6,7 @@ package Clinica;
 
 import Consulta.Consulta;
 import java.util.ArrayList;
+import user.Administrador;
 import user.Medico;
 import user.Secretario;
 import user.Usuario;
@@ -45,6 +46,11 @@ public class Clinica {
         if (tipoUsuario.equalsIgnoreCase("Médico")){
             Medico medico = new Medico(nomeDeUsuario, senha, cpf, especilizacaoMedico);
             this.usuarios.add(medico);
+            return;
+        }
+        if (tipoUsuario.equalsIgnoreCase("Administrador")){
+            Administrador adm = new Administrador(nomeDeUsuario, senha, cpf);
+            this.usuarios.add(adm);
             return;
         }
         

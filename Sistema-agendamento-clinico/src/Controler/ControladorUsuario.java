@@ -6,6 +6,8 @@ package Controler;
 
 import java.util.Arrays;
 import Clinica.Clinica;
+import user.Medico;
+import user.Secretario;
 import user.Usuario;
 
 /**
@@ -53,8 +55,23 @@ public class ControladorUsuario {
         Clinica clinica = Clinica.getInstance();
         
         for (Usuario user : clinica.getUsuarios()){
-            if (user.getNomeDeUsuario().equals(nomeMedico)){
-                
+            if (user instanceof Secretario userSecre){
+                for (Medico med : userSecre.getMedicosAssociados()){
+                    if (nomeMedico.equals(med.getNomeDeUsuario())){
+                        return false;
+                    }
+                }
+            }
+        }
+        
+        for (Usuario user : clinica.getUsuarios()){
+            if (user instanceof Secretario userSecre && userSecre.getNomeDeUsuario().equals(nomeSecretario)){
+                for (Usuario med : clinica.getUsuarios()){
+                    if (med instanceof Medico userMed && nomeMedico.equals(med.getNomeDeUsuario())){
+                        userSecre.associarAoMedico(userMed);
+                        return true;
+                    }
+                }
             }
         }
         
