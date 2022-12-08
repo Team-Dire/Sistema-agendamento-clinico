@@ -35,6 +35,7 @@ public class UIPrincipal extends javax.swing.JFrame {
         menuConsultas = new javax.swing.JMenu();
         btnConfirmarConsulta = new javax.swing.JMenuItem();
         btnNovaConsulta = new javax.swing.JMenuItem();
+        btnCancelarConsulta = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -69,7 +70,15 @@ public class UIPrincipal extends javax.swing.JFrame {
         menuConsultas.add(btnConfirmarConsulta);
 
         btnNovaConsulta.setText("Nova Consulta");
+        btnNovaConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovaConsultaActionPerformed(evt);
+            }
+        });
         menuConsultas.add(btnNovaConsulta);
+
+        btnCancelarConsulta.setText("Cancelar Consulta");
+        menuConsultas.add(btnCancelarConsulta);
 
         jMenuBar1.add(menuConsultas);
 
@@ -93,51 +102,50 @@ public class UIPrincipal extends javax.swing.JFrame {
         Clinica clinica = Clinica.getInstance();
         //caso não exista nenhum usuário
         if (clinica.getUsuarios().isEmpty()){
-            java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
-                    form.addWindowListener(new java.awt.event.WindowAdapter() {
-                        @Override
-                        public void windowClosing(java.awt.event.WindowEvent e) {
-                            System.exit(0);
-                        }
-                    });
-                    form.setVisible(true);
-                }
+            java.awt.EventQueue.invokeLater(() -> {
+                UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
+                form.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                form.setVisible(true);
             });
         }else{
-            java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    UIAutenticar dialog = new UIAutenticar(new javax.swing.JFrame(), true);
-                    dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                        @Override
-                        public void windowClosing(java.awt.event.WindowEvent e) {
-                            System.exit(0);
-                        }
-                    });
-                    dialog.setVisible(true);
-                }
+            java.awt.EventQueue.invokeLater(() -> {
+                UIAutenticar dialog = new UIAutenticar(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
             });
         }
     }//GEN-LAST:event_formWindowOpened
 
     private void btnNovoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoUsuarioActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
-                form.setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
+            form.setVisible(true);
         });
     }//GEN-LAST:event_btnNovoUsuarioActionPerformed
 
     private void btnAssociarSecretarioMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssociarSecretarioMedicoActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+        java.awt.EventQueue.invokeLater(() -> {
                 UIAssociarSecretarioMedico dialog = new UIAssociarSecretarioMedico(new javax.swing.JFrame(), true);
                 dialog.setVisible(true);
-            }
         });
     }//GEN-LAST:event_btnAssociarSecretarioMedicoActionPerformed
+
+    private void btnNovaConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaConsultaActionPerformed
+        java.awt.EventQueue.invokeLater(() -> {
+            UINovaConsulta dialog = new UINovaConsulta(new javax.swing.JFrame(), true);
+            dialog.setVisible(true);
+        });
+    }//GEN-LAST:event_btnNovaConsultaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,6 +184,7 @@ public class UIPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem btnAssociarSecretarioMedico;
+    private javax.swing.JMenuItem btnCancelarConsulta;
     private javax.swing.JMenuItem btnConfirmarConsulta;
     private javax.swing.JMenuItem btnNovaConsulta;
     private javax.swing.JMenuItem btnNovoUsuario;
