@@ -1,6 +1,8 @@
 package user;
 
-public class Medico extends Usuario {
+import java.io.Serializable;
+
+public class Medico extends Usuario implements Serializable {
 
     private final String especializacao;
 

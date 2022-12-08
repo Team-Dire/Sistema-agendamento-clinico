@@ -34,12 +34,12 @@ public class ControladorUsuario {
         return true;
     }
 
-    public static boolean autenticar(String cpf, char[] senha) {
+    public static Boolean autenticar(String cpf, char[] senha) {
         if (cpf.equals("") || senha.equals("")){
-            return !false;
+            return false;
         }
         
-        Clinica clinica = new Clinica();
+        Clinica clinica = Clinica.getInstance();
 
         for (Usuario user : clinica.getUsuarios()){
             if (user.getCPF().equalsIgnoreCase(cpf) && Arrays.equals(user.getSenha(), senha)){
@@ -50,7 +50,7 @@ public class ControladorUsuario {
         return false;
     }
     
-    public static boolean associarSecretarioMedico(String nomeSecretario, String nomeMedico){
+    public static Boolean associarSecretarioMedico(String nomeSecretario, String nomeMedico){
         
         Clinica clinica = Clinica.getInstance();
         
@@ -76,5 +76,20 @@ public class ControladorUsuario {
         }
         
         return false;
+    }
+    
+    public static Boolean isListaUsuarioEmpty(){
+        Clinica clinica = Clinica.getInstance();
+        return clinica.getUsuarios().isEmpty();
+    }
+    
+    public static Usuario getUsuario(String cpf){
+        Clinica clinica = Clinica.getInstance();
+        for (Usuario user : clinica.getUsuarios()){
+            if(user.getCPF().equals(cpf)){
+                return user;
+            }
+        }
+        return null;
     }
 }

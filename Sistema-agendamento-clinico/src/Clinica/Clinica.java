@@ -5,17 +5,16 @@
 package Clinica;
 
 import Consulta.Consulta;
+import java.io.Serializable;
 import java.util.ArrayList;
-import user.Administrador;
-import user.Medico;
-import user.Secretario;
-import user.Usuario;
+import java.util.Date;
+import user.*;
 
 /**
  *
  * @author Guilherme
  */
-public class Clinica {
+public class Clinica implements Serializable{
     
     private static Clinica instance;
     
@@ -24,6 +23,10 @@ public class Clinica {
             instance = new Clinica();
         }
         return instance;
+    }
+
+    public static void setInstance(Clinica instance) {
+        Clinica.instance = instance;
     }
     
     private ArrayList<Usuario> usuarios;
@@ -58,5 +61,8 @@ public class Clinica {
         this.usuarios.add(secretario);
     }
     
+    public void addConsulta(String nomePaciente, String CPFPaciente, Medico medico, Date horario){
+        this.consultas.add(new Consulta(nomePaciente, CPFPaciente, medico, horario, false));
+    }
     
 }

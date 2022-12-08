@@ -4,6 +4,7 @@
  */
 package Consulta;
 
+import java.io.Serializable;
 import java.util.Date;
 import user.Medico;
 
@@ -11,7 +12,7 @@ import user.Medico;
  *
  * @author Guilherme
  */
-public class Consulta {
+public class Consulta implements Serializable {
     private String paciente;
     private String CPFpaciente;
     private Medico medico;
@@ -33,4 +34,45 @@ public class Consulta {
     public void notificar(){
         return;
     }
+
+    public String getPaciente() {
+        return paciente;
+    }
+
+    public String getCPFpaciente() {
+        return CPFpaciente;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public Date getHorario() {
+        return horario;
+    }
+
+    public Boolean getConfirmada() {
+        return confirmada;
+    }
+
+    public void setPaciente(String paciente) {
+        this.paciente = paciente;
+    }
+
+    public void setCPFpaciente(String CPFpaciente) {
+        this.CPFpaciente = CPFpaciente;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    public void setHorario(Date horario) {
+        this.horario = horario;
+    }
+
+    public void setConfirmada(Boolean confirmada) {
+        this.confirmada = confirmada;
+    }
+    
 }

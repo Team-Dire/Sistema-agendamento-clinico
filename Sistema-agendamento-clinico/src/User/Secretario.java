@@ -1,8 +1,9 @@
 package user;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Secretario extends Usuario{
+public class Secretario extends Usuario implements Serializable {
     
     private ArrayList<Medico> medicosAssociados;
     

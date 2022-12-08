@@ -5,6 +5,10 @@
 package UI;
 
 import Clinica.Clinica;
+import Controler.ControladorUsuario;
+import Serializacao.Serializa;
+import javax.swing.JOptionPane;
+import user.*;
 
 /**
  *
@@ -18,6 +22,8 @@ public class UIPrincipal extends javax.swing.JFrame {
     public UIPrincipal() {
         initComponents();
     }
+    
+    private Usuario usuarioLogin = null;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,8 +43,11 @@ public class UIPrincipal extends javax.swing.JFrame {
         btnNovaConsulta = new javax.swing.JMenuItem();
         btnCancelarConsulta = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
@@ -99,9 +108,10 @@ public class UIPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        Clinica clinica = Clinica.getInstance();
+        Serializa.leituraDoArquivo();
+
         //caso não exista nenhum usuário
-        if (clinica.getUsuarios().isEmpty()){
+        if (ControladorUsuario.isListaUsuarioEmpty()){
             java.awt.EventQueue.invokeLater(() -> {
                 UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
                 form.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -111,6 +121,7 @@ public class UIPrincipal extends javax.swing.JFrame {
                     }
                 });
                 form.setVisible(true);
+                this.usuarioLogin = form.getAdministrador();
             });
         }else{
             java.awt.EventQueue.invokeLater(() -> {
@@ -122,30 +133,48 @@ public class UIPrincipal extends javax.swing.JFrame {
                     }
                 });
                 dialog.setVisible(true);
+                this.usuarioLogin = dialog.getUsuarioAutenticado();
             });
         }
     }//GEN-LAST:event_formWindowOpened
 
     private void btnNovoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoUsuarioActionPerformed
-        java.awt.EventQueue.invokeLater(() -> {
-            UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
-            form.setVisible(true);
-        });
+        if (this.usuarioLogin instanceof Administrador){
+            java.awt.EventQueue.invokeLater(() -> {
+                UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
+                form.setVisible(true);
+            });
+        } else {
+            JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
+        }
     }//GEN-LAST:event_btnNovoUsuarioActionPerformed
 
     private void btnAssociarSecretarioMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssociarSecretarioMedicoActionPerformed
-        java.awt.EventQueue.invokeLater(() -> {
+        if (this.usuarioLogin instanceof Administrador || this.usuarioLogin instanceof Medico){
+            java.awt.EventQueue.invokeLater(() -> {
                 UIAssociarSecretarioMedico dialog = new UIAssociarSecretarioMedico(new javax.swing.JFrame(), true);
                 dialog.setVisible(true);
-        });
+            });
+        } else {
+            JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
+        }
     }//GEN-LAST:event_btnAssociarSecretarioMedicoActionPerformed
 
     private void btnNovaConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovaConsultaActionPerformed
-        java.awt.EventQueue.invokeLater(() -> {
-            UINovaConsulta dialog = new UINovaConsulta(new javax.swing.JFrame(), true);
-            dialog.setVisible(true);
-        });
+        if (this.usuarioLogin instanceof Secretario){
+            java.awt.EventQueue.invokeLater(() -> {
+                UINovaConsulta dialog = new UINovaConsulta(new javax.swing.JFrame(), true);
+                dialog.setVisible(true);
+            });
+        } else {
+            JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
+        }
     }//GEN-LAST:event_btnNovaConsultaActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        Serializa.gravaNoArquivo();
+        System.exit(0);
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments

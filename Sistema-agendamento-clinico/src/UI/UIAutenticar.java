@@ -6,6 +6,7 @@ package UI;
 
 import Controler.ControladorUsuario;
 import javax.swing.JOptionPane;
+import user.Usuario;
 
 /**
  *
@@ -78,4 +79,9 @@ public class UIAutenticar extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel labelCPF;
     // End of variables declaration//GEN-END:variables
+
+    public Usuario getUsuarioAutenticado(){
+        String cpf = this.inputCPF.getText();
+        return ControladorUsuario.getUsuario(cpf);
+    }
 }

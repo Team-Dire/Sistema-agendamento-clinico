@@ -7,6 +7,8 @@ package UI;
 import Controler.ControladorUsuario;
 import java.util.Arrays;
 import javax.swing.JOptionPane;
+import user.Administrador;
+import user.Usuario;
 
 /**
  *
@@ -106,6 +108,11 @@ public class UIAdicionarUsuario extends javax.swing.JDialog {
         String tipoUsuario = this.inputTipoUsuario.getSelectedItem().toString();
         String especializacaoMedico = this.inputEspecializacao.getText();
         
+        if (ControladorUsuario.isListaUsuarioEmpty() && !tipoUsuario.equalsIgnoreCase("Administrador")){
+            JOptionPane.showMessageDialog(null, "O Primeiro Usuário deve ser um administrador!!");
+            return;
+        }
+        
         if (nome.isBlank() || cpf.isBlank() || senha.equals("") || confirmarSenha.equals("") || tipoUsuario.isBlank()){
             JOptionPane.showMessageDialog(null, "Alguns campos estão vazios!! Preencha os campos obrigatórios!!");
             return;
@@ -158,4 +165,9 @@ public class UIAdicionarUsuario extends javax.swing.JDialog {
     private javax.swing.JLabel labelNome;
     private javax.swing.JLabel labelTipoUsuario;
     // End of variables declaration//GEN-END:variables
+
+    public Usuario getAdministrador() {
+        String cpf = this.inputCPF.getText();
+        return (Administrador) ControladorUsuario.getUsuario(cpf);
+    }
 }
