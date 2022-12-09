@@ -92,4 +92,17 @@ public class ControladorConsulta {
         
         return consultasHoje;
     }
+    
+    public static ArrayList<Consulta> getConsultaPaciente(String nomePaciente){
+        Clinica clinica = Clinica.getInstance();
+        ArrayList<Consulta> consultasHoje = new ArrayList<>();
+        
+        for (Consulta cons : clinica.getConsultas()){
+            if (cons.getPaciente().equals(nomePaciente)){
+                consultasHoje.add(cons);
+            }
+        }
+        
+        return consultasHoje;
+    }
 }

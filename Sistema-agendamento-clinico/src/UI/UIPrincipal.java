@@ -228,7 +228,10 @@ public class UIPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVerifiacrConsultasDiaActionPerformed
 
     private void btnVerificarConsultasPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarConsultasPacienteActionPerformed
-        // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(() -> {
+            UIConsultasPaciente dialog = new UIConsultasPaciente(new javax.swing.JFrame(), true);
+            dialog.setVisible(true);
+        });
     }//GEN-LAST:event_btnVerificarConsultasPacienteActionPerformed
 
     private void btnVerificarConsultasMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarConsultasMedicoActionPerformed
