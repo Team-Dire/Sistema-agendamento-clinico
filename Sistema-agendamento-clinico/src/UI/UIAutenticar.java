@@ -6,6 +6,7 @@ package UI;
 
 import Controler.ControladorUsuario;
 import javax.swing.JOptionPane;
+import user.Secretario;
 import user.Usuario;
 
 /**
@@ -69,6 +70,11 @@ public class UIAutenticar extends javax.swing.JDialog {
         }
         
         this.setVisible(false);
+        
+        Usuario user = ControladorUsuario.getUsuario(cpf);
+        if (user instanceof Secretario){
+            UIPrincipal.notificarSecretario();
+        }
     }//GEN-LAST:event_btnEntrarActionPerformed
 
 

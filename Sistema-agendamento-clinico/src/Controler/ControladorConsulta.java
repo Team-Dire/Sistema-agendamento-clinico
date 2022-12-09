@@ -6,6 +6,8 @@ package Controler;
 
 import Clinica.Clinica;
 import Consulta.Consulta;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import user.Medico;
 import user.Usuario;
@@ -71,5 +73,23 @@ public class ControladorConsulta {
         }
         
         return false;
+    }
+    
+    public static ArrayList<Consulta> getConsultasDia(Date diaDate){
+        Clinica clinica = Clinica.getInstance();
+        ArrayList<Consulta> consultasHoje = new ArrayList<>();
+        
+        Calendar dia = Calendar.getInstance();
+        dia.setTime(diaDate);
+        
+        for (Consulta cons : clinica.getConsultas()){
+            Calendar dataCons = Calendar.getInstance();
+            dataCons.setTime(cons.getHorario());
+            if (dia.get(Calendar.YEAR) == dataCons.get(Calendar.YEAR) && dia.get(Calendar.MONTH) == dataCons.get(Calendar.MONTH) && dia.get(Calendar.DATE) == dataCons.get(Calendar.DATE)){
+                consultasHoje.add(cons);
+            }
+        }
+        
+        return consultasHoje;
     }
 }

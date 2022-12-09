@@ -4,10 +4,18 @@
  */
 package UI;
 
-import Clinica.Clinica;
+import Consulta.Consulta;
+import Controler.ControladorConsulta;
 import Controler.ControladorUsuario;
 import Serializacao.Serializa;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 import user.*;
 
 /**
@@ -42,6 +50,10 @@ public class UIPrincipal extends javax.swing.JFrame {
         btnConfirmarConsulta = new javax.swing.JMenuItem();
         btnNovaConsulta = new javax.swing.JMenuItem();
         btnCancelarConsulta = new javax.swing.JMenuItem();
+        menuVerificarConsultas = new javax.swing.JMenu();
+        btnVerifiacrConsultasDia = new javax.swing.JMenuItem();
+        btnVerificarConsultasPaciente = new javax.swing.JMenuItem();
+        btnVerificarConsultasMedico = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -99,6 +111,34 @@ public class UIPrincipal extends javax.swing.JFrame {
         });
         menuConsultas.add(btnCancelarConsulta);
 
+        menuVerificarConsultas.setText("VerificarConsultas");
+
+        btnVerifiacrConsultasDia.setText("Do dia");
+        btnVerifiacrConsultasDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerifiacrConsultasDiaActionPerformed(evt);
+            }
+        });
+        menuVerificarConsultas.add(btnVerifiacrConsultasDia);
+
+        btnVerificarConsultasPaciente.setText("De Paciente");
+        btnVerificarConsultasPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerificarConsultasPacienteActionPerformed(evt);
+            }
+        });
+        menuVerificarConsultas.add(btnVerificarConsultasPaciente);
+
+        btnVerificarConsultasMedico.setText("De Médico");
+        btnVerificarConsultasMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerificarConsultasMedicoActionPerformed(evt);
+            }
+        });
+        menuVerificarConsultas.add(btnVerificarConsultasMedico);
+
+        menuConsultas.add(menuVerificarConsultas);
+
         jMenuBar1.add(menuConsultas);
 
         setJMenuBar(jMenuBar1);
@@ -122,29 +162,9 @@ public class UIPrincipal extends javax.swing.JFrame {
 
         //caso não exista nenhum usuário
         if (ControladorUsuario.isListaUsuarioEmpty()){
-            java.awt.EventQueue.invokeLater(() -> {
-                UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
-                form.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                form.setVisible(true);
-                this.usuarioLogin = form.getAdministrador();
-            });
+            this.renderPrimeiroUsuario();
         }else{
-            java.awt.EventQueue.invokeLater(() -> {
-                UIAutenticar dialog = new UIAutenticar(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-                this.usuarioLogin = dialog.getUsuarioAutenticado();
-            });
+            this.renderAutenticacao();
         }
     }//GEN-LAST:event_formWindowOpened
 
@@ -200,6 +220,21 @@ public class UIPrincipal extends javax.swing.JFrame {
         });
     }//GEN-LAST:event_btnConfirmarConsultaActionPerformed
 
+    private void btnVerifiacrConsultasDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifiacrConsultasDiaActionPerformed
+        java.awt.EventQueue.invokeLater(() -> {
+            UIConsultasDia dialog = new UIConsultasDia(new javax.swing.JFrame(), true);
+            dialog.setVisible(true);
+        });
+    }//GEN-LAST:event_btnVerifiacrConsultasDiaActionPerformed
+
+    private void btnVerificarConsultasPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarConsultasPacienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVerificarConsultasPacienteActionPerformed
+
+    private void btnVerificarConsultasMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarConsultasMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVerificarConsultasMedicoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -228,10 +263,8 @@ public class UIPrincipal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new UIPrincipal().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new UIPrincipal().setVisible(true);
         });
     }
 
@@ -241,8 +274,63 @@ public class UIPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem btnConfirmarConsulta;
     private javax.swing.JMenuItem btnNovaConsulta;
     private javax.swing.JMenuItem btnNovoUsuario;
+    private javax.swing.JMenuItem btnVerifiacrConsultasDia;
+    private javax.swing.JMenuItem btnVerificarConsultasMedico;
+    private javax.swing.JMenuItem btnVerificarConsultasPaciente;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu menuConsultas;
     private javax.swing.JMenu menuUsuario;
+    private javax.swing.JMenu menuVerificarConsultas;
     // End of variables declaration//GEN-END:variables
+
+    private void renderPrimeiroUsuario(){
+        java.awt.EventQueue.invokeLater(() -> {
+            UIAdicionarUsuario form = new UIAdicionarUsuario(new javax.swing.JFrame(), true);
+            form.addWindowListener(new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosing(java.awt.event.WindowEvent e) {
+                    System.exit(0);
+                }
+            });
+            form.setVisible(true);
+            this.usuarioLogin = form.getAdministrador();
+        });
+    }
+    
+    private void renderAutenticacao(){
+        java.awt.EventQueue.invokeLater(() -> {
+            UIAutenticar dialog = new UIAutenticar(new javax.swing.JFrame(), true);
+            dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosing(java.awt.event.WindowEvent e) {
+                    System.exit(0);
+                }
+            });
+            dialog.setVisible(true);
+            this.usuarioLogin = dialog.getUsuarioAutenticado();
+        });
+    }
+
+    public static void notificarSecretario() {
+        SimpleDateFormat formater = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        
+        ArrayList<Consulta> consultasHoje = ControladorConsulta.getConsultasDia(new Date());
+        DefaultTableModel tableModel = new DefaultTableModel();
+        tableModel.setNumRows(0);
+        
+        tableModel.setColumnIdentifiers(new Object[] {
+            "Nome do Paciente", "CPF do Paciente", "Nome do Médico", "Horário", "Confirmada"
+        });
+
+        for (Consulta cons : consultasHoje){
+            tableModel.addRow(new Object[] {
+                cons.getPaciente(), cons.getCPFpaciente(), cons.getMedico().getNomeDeUsuario(), formater.format(cons.getHorario()), cons.getConfirmada() ? "Sim" : "Não"
+            });
+        }
+        
+        JTable tabelaConsultas = new JTable(tableModel);
+        JOptionPane.showMessageDialog(null, new Object[] {
+        new JLabel("Consultas do dia:"), new JScrollPane(tabelaConsultas)
+        });
+    }
 }
