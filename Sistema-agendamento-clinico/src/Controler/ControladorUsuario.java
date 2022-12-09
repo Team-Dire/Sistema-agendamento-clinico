@@ -92,4 +92,11 @@ public class ControladorUsuario {
         }
         return null;
     }
+    
+    public static Boolean secretarioTrabalhaComMedico(Secretario secre){
+        
+        
+        
+        return false;
+    }
 }

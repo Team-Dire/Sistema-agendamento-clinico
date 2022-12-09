@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import user.Medico;
+import user.Secretario;
 import user.Usuario;
 
 /**
@@ -106,12 +107,12 @@ public class ControladorConsulta {
         return consultasHoje;
     }
     
-    public static ArrayList<Consulta> getConsultasMedico(String nomeMedico){
+    public static ArrayList<Consulta> getConsultasMedico(String nomeMedico, Secretario secre){
         Clinica clinica = Clinica.getInstance();
         ArrayList<Consulta> consultasHoje = new ArrayList<>();
         
         for (Consulta cons : clinica.getConsultas()){
-            if (cons.getMedico().getNomeDeUsuario().equals(nomeMedico)){
+            if (cons.getMedico().getNomeDeUsuario().equals(nomeMedico) && secre.getMedicosAssociados().contains(cons.getMedico())){
                 consultasHoje.add(cons);
             }
         }

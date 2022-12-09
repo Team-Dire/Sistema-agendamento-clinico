@@ -207,38 +207,58 @@ public class UIPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     private void btnCancelarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarConsultaActionPerformed
-        java.awt.EventQueue.invokeLater(() -> {
-            UICancelarConsulta dialog = new UICancelarConsulta(new javax.swing.JFrame(), true);
-            dialog.setVisible(true);
-        });
+        if (this.usuarioLogin instanceof Secretario){
+            java.awt.EventQueue.invokeLater(() -> {
+                UICancelarConsulta dialog = new UICancelarConsulta(new javax.swing.JFrame(), true);
+                dialog.setVisible(true);
+            });
+        } else {
+            JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
+        }
     }//GEN-LAST:event_btnCancelarConsultaActionPerformed
 
     private void btnConfirmarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarConsultaActionPerformed
-        java.awt.EventQueue.invokeLater(() -> {
-            UIConfirmarPaciente dialog = new UIConfirmarPaciente(new javax.swing.JFrame(), true);
-            dialog.setVisible(true);
-        });
+        if (this.usuarioLogin instanceof Secretario){
+            java.awt.EventQueue.invokeLater(() -> {
+                UIConfirmarPaciente dialog = new UIConfirmarPaciente(new javax.swing.JFrame(), true);
+                dialog.setVisible(true);
+            });
+        } else {
+            JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
+        }
     }//GEN-LAST:event_btnConfirmarConsultaActionPerformed
 
     private void btnVerifiacrConsultasDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifiacrConsultasDiaActionPerformed
-        java.awt.EventQueue.invokeLater(() -> {
-            UIConsultasDia dialog = new UIConsultasDia(new javax.swing.JFrame(), true);
-            dialog.setVisible(true);
-        });
+        if (this.usuarioLogin instanceof Secretario){
+            java.awt.EventQueue.invokeLater(() -> {
+                UIConsultasDia dialog = new UIConsultasDia(new javax.swing.JFrame(), true);
+                dialog.setVisible(true);
+            });
+        } else {
+            JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
+        }
     }//GEN-LAST:event_btnVerifiacrConsultasDiaActionPerformed
 
     private void btnVerificarConsultasPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarConsultasPacienteActionPerformed
-        java.awt.EventQueue.invokeLater(() -> {
-            UIConsultasPaciente dialog = new UIConsultasPaciente(new javax.swing.JFrame(), true);
-            dialog.setVisible(true);
-        });
+        if (this.usuarioLogin instanceof Secretario){
+            java.awt.EventQueue.invokeLater(() -> {
+                UIConsultasPaciente dialog = new UIConsultasPaciente(new javax.swing.JFrame(), true);
+                dialog.setVisible(true);
+            });
+        } else {
+            JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
+        }
     }//GEN-LAST:event_btnVerificarConsultasPacienteActionPerformed
 
     private void btnVerificarConsultasMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarConsultasMedicoActionPerformed
-        java.awt.EventQueue.invokeLater(() -> {
-            UIConsultasMedico dialog = new UIConsultasMedico(new javax.swing.JFrame(), true);
-            dialog.setVisible(true);
-        });
+        if (this.usuarioLogin instanceof Secretario){
+            java.awt.EventQueue.invokeLater(() -> {
+                UIConsultasMedico dialog = new UIConsultasMedico(new javax.swing.JFrame(), true, (Secretario) this.usuarioLogin);
+                dialog.setVisible(true);
+            });
+        } else {
+            JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
+        }
     }//GEN-LAST:event_btnVerificarConsultasMedicoActionPerformed
 
     /**
