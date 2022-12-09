@@ -1,16 +1,0 @@
-
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÁÕŒüÿÿÿÿ
-G
-java:S1068",Remove this unused "baraMenu" private field.(óÿÅ¹ÿÿÿÿÿ
-F
-java:S1068"0Remove this unused "menuUsuarios" private field.(¼¸ºü
-F
-java:S1068"0Remove this unused "btnAddMedico" private field.(¼–¦Ü
-O
-java:S1068"4Remove this unused "btnAddSecretario" private field.(ÁÀŒËşÿÿÿÿ
-G
-java:S1068"1Remove this unused "menuConsultas" private field.(ËÓâÃ
-U
-java:S1068":Remove this unused "btnConfirmaraConsultas" private field.(úéÒøÿÿÿÿ
-H
-java:S1068"2Remove this unused "btnAddConsulta" private field.( á¿‚
