@@ -1,4 +1,5 @@
 # Caso de uso: Autenticar um usuário.
+
 **Ator:** Usuário (iniciador da ação).
 
 **Finalidade:** Permitir que os usuários sejam identificados e sejam lhe dado acesso a funcionalidades do software.
@@ -17,9 +18,10 @@
 | | 4. O software libera as funcionalidades do software de acordo com a categoria do usuário. |
 | 5. O usuário utiliza o software. | |
 
-**Sequência alternativa:**: Linha 3. O software verifica se as credenciais são válidas. Se o usuário que deseja ser autenticado não existir, o software irá emitir uma notificação sobre isso. 
+**Sequência alternativa:**: Linha 3. O software verifica se as credenciais são válidas. Se o usuário que deseja ser autenticado não existir, o software irá emitir uma notificação sobre isso.
 
 # Caso de uso: Adicionar um novo usuário ao software.
+
 **Ator:** Administrador (iniciador da ação).
 
 **Finalidade:** Permitir que novos usuários sejam adicionados ao software.
@@ -40,6 +42,7 @@
 **Sequência alternativa:**: Linha 3. O software verifica se o usuário já existe. Se existir, o software retorna a mensagem "Usuário já existente".
 
 # Caso de uso: Associar um secretário a um médico.
+
 **Ator:** Administrador ou Médico (iniciador da ação).
 
 **Finalidade:** Permitir que um secretário seja associado a um médico.
@@ -59,6 +62,7 @@
 **Sequência alternativa:**: Linha 3. O médico já possui um secretário associado. O software retorna a mensagem "Médico já possui um secretário associado".
 
 # Caso de uso: Agendamento de uma consulta.
+
 **Ator:**: Secretário (iniciador da ação).
 
 **Finalidade:**: Permitir que um secretário agende uma consulta para um paciente.
@@ -77,10 +81,12 @@
 | | 4. O software agenda a consulta. |
 
 **Sequência alternativa:**:
+
 - Linha 3. O software verifica se o médico está disponível na data e horário informados. Se não estiver, o software retorna a mensagem "Médico indisponível na data e horário informados".
 - Linha 4. O software verifica se a data da consulta está entre 30 minutos e 60 dias a partir da data atual. Se não estiver, o software retorna a mensagem "Data da consulta inválida".
 
 # Caso de uso: Cancelar uma consulta.
+
 **Ator:**: Secretário (iniciador da ação).
 
 **Finalidade:**: Permitir que um secretário cancele uma consulta.
@@ -98,6 +104,7 @@
 | 2. O secretário informa a consulta que será cancelada. | 3. O software cancela a consulta. |
 
 # Caso de uso: confirmar o comparecimento de um paciente.
+
 **Ator:**: Secretário (iniciador da ação).
 
 **Finalidade:**: Permitir que um secretário confirme o comparecimento de um paciente.
@@ -118,6 +125,7 @@
 **Sequência alternativa:**: Linha 3. O software verifica se a consulta está marcada para 7 dias a partir da data atual. Se não estiver, o software retorna a mensagem "Consulta não pode ser confirmada com menos de 7 dias de antecedência".
 
 # Caso de uso: Notificar o secretário sobre uma consulta.
+
 **Ator:**: Software (iniciador da ação).
 
 **Finalidade:**: Permitir que o software notifique o secretário sobre uma consulta.
@@ -136,6 +144,7 @@
 | | 3. O software notifica o secretário sobre as consultas que não foram confirmadas. |
 
 # Caso de uso: Verificar a agenda de um paciente.
+
 **Ator:**: Secretário (iniciador da ação).
 
 **Finalidade:**: Permitir que um médico ou secretário verifique a agenda de um paciente.
@@ -153,6 +162,7 @@
 | 2. O usuário informa o nome do paciente. | 3. O software retorna a agenda do paciente. |
 
 # Caso de uso: Verificar a agenda para um dia.
+
 **Ator:**: Secretário ou médico (iniciador da ação).
 
 **Finalidade:**: Permitir que um médico ou secretário verifique a agenda para um dia.
@@ -169,24 +179,8 @@
 | 1. Usuário executa o software | |
 | 2. O usuário informa a data. | 3. O software retorna a agenda para o dia. |
 
-# Caso de uso: Cancelar uma consulta.
-**Ator:**: Secretário (iniciador da ação).
-
-**Finalidade:**: Permitir que um secretário cancele uma consulta.
-
-**Tipo:** Primário, essencial.
-
-**Descrição:**: O paciente deseja cancelar uma consulta. O secretário informa a consulta que será cancelada. O software cancela a consulta.
-
-**Referências cruzadas:**: R7.
-
-**Sequência típica:**
-| Secretário | Software |
-| --- | --- |
-| 1. O secretário executa o software | |
-| 2. O secretário informa a consulta que será cancelada. | 3. O software cancela a consulta. |
-
 # Caso de uso: Verificar a agenda de um médico.
+
 **Ator:**: Secretário (iniciador da ação).
 
 **Finalidade:**: Permitir que um secretário verifique a agenda de um médico.
@@ -204,3 +198,61 @@
 | 2. O secretário informa o nome do médico. | 3. O software retorna a agenda do médico. |
 
 **Sequência alternativa:**: Linha 3. O secretário não trabalha com o médico. O software retorna a mensagem "Médico não trabalha com o secretário".
+
+# Caso de uso: Verificar o histórico de consultas de um médico.
+
+**Ator:**: Secretário (iniciador da ação).
+
+**Finalidade:**: Permitir que um secretário verifique o histórico de consultas de um médico nos possíveis intervalos de 1 mês, 3 meses ou 1 ano.
+
+**Tipo:** Primário, essencial.
+
+**Descrição:**: O secretário deseja verificar o histórico de consultas de um médico. Ele informa o nome do médico e o intervalo de tempo. O software retorna o histórico de consultas do médico no intervalo de tempo.
+
+**Referências cruzadas:**: R11.
+
+**Sequência típica:**
+| Secretário | Software |
+| --- | --- |
+| 1. O secretário executa o software | |
+| 2. O secretário informa o nome do médico. | 3. O software retorna o histórico de consultas do médico no intervalo de tempo. |
+
+**Sequência alternativa:**: Linha 3. O secretário não trabalha com o médico. O software retorna a mensagem "Médico não trabalha com o secretário".
+
+# Caso de uso: Verificar a lista de pacientes de um médico.
+
+**Ator:**: Secretário (iniciador da ação).
+
+**Finalidade:**: Permitir que um secretário verifique a listagem de pacientes de um médico nos possíveis intervalos de 1 mês, 3 meses ou 1 ano.
+
+**Tipo:** Primário, essencial.
+
+**Descrição:**: O secretário deseja verificar a listagem de pacientes de um médico. Ele informa o nome do médico e o intervalo de tempo. O software retorna a listagem de pacientes do médico no intervalo de tempo.
+
+**Referências cruzadas:**: R12.
+
+**Sequência típica:**
+| Secretário | Software |
+| --- | --- |
+| 1. O secretário executa o software | |
+| 2. O secretário informa o nome do médico. | 3. O software retorna a listagem de pacientes do médico no intervalo de tempo. |
+
+**Sequência alternativa:**: Linha 3. O secretário não trabalha com o médico. O software retorna a mensagem "Médico não trabalha com o secretário".
+
+# Caso de Uso: Receber o pagamento de uma consulta.
+
+**Ator**: Secretário (iniciador da ação).
+
+**Finalidade**: Permitir que o secretário receba o pagamento de uma consulta.
+
+**Tipo**: Primário, essencial.
+
+**Descrição**: O secretário deseja receber o pagamento de uma consulta. Ele informa o valor da consulta, o nome do paciente e o tipo de pagamento (convênio ou particular). O software confirma o pagamento.
+
+**Referências cruzadas**: R10.\*
+
+**Sequência típica:**
+| Secretário | Software |
+| --- | --- |
+| 1. O secretário executa o software | |
+| 2. O secretário informa o valor da consulta, o nome do paciente e o tipo de pagamento. | 3. O software confirma o pagamento. |
