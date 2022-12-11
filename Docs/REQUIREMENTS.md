@@ -15,7 +15,7 @@
 
 ### Pagamentos
 - R.10 O sistema deve permitir que os pacientes realizem o pagamento por convênio ou particular. (E)
-- R.10.1 O pagamento da consulta deverá ser realizado no respectivo dia da consulta, antes do paciente ser consultado. (E)
+- R.10.1 O pagamento da consulta deverá ser realizado no respectivo dia da consulta, após o paciente ser consultado. (E)
 - R.10.2 O pagamento não será validado pelo sistema, mas o tipo de pagamento deverá ser informado e autorizado pelo secretário. (E)
 - R.10.3 O sistema deve permitir que o sistema aceite o pagamento de novos convênios posteriormente. (E)
 - R.10.4 O sistema deve permitir que os tipos de pagamento privado sejam realizados por cartão de crédito, débito ou pix. (E)
