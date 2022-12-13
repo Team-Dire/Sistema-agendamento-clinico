@@ -249,10 +249,14 @@
 
 **Descrição**: O secretário deseja receber o pagamento de uma consulta. Ele informa o valor da consulta, o nome do paciente e o tipo de pagamento (convênio ou particular). O software confirma o pagamento.
 
+**Glossário**: Tipo de pagamento - convênio ou particular.
+
 **Referências cruzadas**: R10.\*
 
 **Sequência típica:**
 | Secretário | Software |
 | --- | --- |
 | 1. O secretário executa o software | |
-| 2. O secretário informa o valor da consulta, o nome do paciente e o tipo de pagamento. | 3. O software confirma o pagamento. |
+| 2. O secretário informa o valor da consulta, o nome do paciente e o convênio. | 3. O software confirma o pagamento. |
+
+**Sequência alternativa:** Linha 2: O secretário informa que o tipo de pagamento é particular. Ele informará o método de pagamento (cartão de crédito, débito ou PIX). O software confirma o pagamento.
