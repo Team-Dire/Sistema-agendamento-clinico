@@ -1,6 +1,7 @@
 # Requisitos funcionais
 
 ### Agendamento de consultas
+
 - R.1 O sistema deve autenticar os usuários e classificá-los em médicos ou secretários. (E)
 - R.1.1 Os sistema deverá armazenar os dados de CPF, senha, nome do usuário, e caso o usuário seja um médico, especialização do médico. (E)
 - R.2 O sistema deve permitir que os secretários agendem consultas com até 60 dias de antecedência, e pelo menos, 30 minutos de antecedência. (E)
@@ -14,6 +15,7 @@
 - R.9 O sistema deve permitir que cada médico seja associado a um determinado secretário, podendo um secretário possuir mais de um médico. (E)
 
 ### Pagamentos
+
 - R.10 O sistema deve permitir que os pacientes realizem o pagamento por convênio ou particular. (E)
 - R.10.1 O pagamento da consulta deverá ser realizado no respectivo dia da consulta, após o paciente ser consultado. (E)
 - R.10.2 O pagamento não será validado pelo sistema, mas o tipo de pagamento deverá ser informado e autorizado pelo secretário. (E)
@@ -21,10 +23,12 @@
 - R.10.4 O sistema deve permitir que os tipos de pagamento privado sejam realizados por cartão de crédito, débito ou pix. (E)
 
 ### Relatórios
+
 - R.11 O sistema deve permitir que os secretários verifiquem o histórico de consultas de um médico há 1 mês, 3 meses, ou 1 ano atrás. (E)
 - R.12 O sistema deve permitir que os secretários verifiquem a lista de pacientes nos quais já foram atendidos pelo médico há 1 mês, 1 ano, ou desde o início do software. (E)
 
 ### Refinamento da agenda
+
 - R.13 O sistema deve permitir que secretários adiem os horários agendados ou confirmados dos pacientes. (E)
 - R.13.1. Os horários adiados deverão ser confirmados novamente de acordo com o requisito 2. (E)
 - R.14 O sistema deve impedir o agendamento de horários durante o período de férias do médico. (E)
