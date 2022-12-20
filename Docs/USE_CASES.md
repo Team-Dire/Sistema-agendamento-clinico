@@ -234,10 +234,9 @@
 **Sequência típica:**
 | Secretário | Software |
 | --- | --- |
-| 1. O secretário executa o software | |
-| 2. O secretário informa o nome do médico. | 3. O software retorna a listagem de pacientes do médico no intervalo de tempo. |
+| 1. O secretário informa o nome do médico. | 2. O software retorna a listagem de pacientes do médico no intervalo de tempo. |
 
-**Sequência alternativa:**: Linha 3. O secretário não trabalha com o médico. O software retorna a mensagem "Médico não trabalha com o secretário".
+**Sequência alternativa:**: Linha 2. O secretário não trabalha com o médico. O software retorna a mensagem "Médico não trabalha com o secretário".
 
 # Caso de Uso: Receber o pagamento de uma consulta.
 
@@ -256,7 +255,6 @@
 **Sequência típica:**
 | Secretário | Software |
 | --- | --- |
-| 1. O secretário executa o software | |
-| 2. O secretário informa o valor da consulta, o nome do paciente e o convênio. | 3. O software confirma o pagamento. |
+| 1. O secretário informa o valor da consulta, o nome do paciente e o convênio. | 2. O software confirma o pagamento. |
 
-**Sequência alternativa:** Linha 2: O secretário informa que o tipo de pagamento é particular. Ele informará o método de pagamento (cartão de crédito, débito ou PIX). O software confirma o pagamento.
+**Sequência alternativa:** Linha 1: O secretário informa que o tipo de pagamento é particular. Ele informará o método de pagamento (cartão de crédito, débito ou PIX). O software confirma o pagamento.
