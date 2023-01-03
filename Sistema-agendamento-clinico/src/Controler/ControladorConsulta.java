@@ -6,6 +6,7 @@ package Controler;
 
 import Clinica.Clinica;
 import Consulta.Consulta;
+import Pagamento.MetodoPagamento;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -118,5 +119,31 @@ public class ControladorConsulta {
         }
         
         return consultasHoje;
+    }
+    
+    public static Boolean pagarConsulta(String nomePaciente, float valor, String nomeConvenio) {
+        Clinica clinica = Clinica.getInstance();
+        
+        for (Consulta cons : clinica.getConsultas()){
+            if (cons.getPaciente().equals(nomePaciente)){
+                cons.pagar(valor, nomeConvenio);
+                return true;
+            }
+        }  
+        
+        return false;
+    }
+    
+    public static Boolean pagarConsulta(String nomePaciente, float valor, MetodoPagamento metodoPagamento) {
+        Clinica clinica = Clinica.getInstance();
+        
+        for (Consulta cons : clinica.getConsultas()){
+            if (cons.getPaciente().equals(nomePaciente)){
+                cons.pagar(valor, metodoPagamento);
+                return true;
+            }
+        }  
+        
+        return false;
     }
 }
