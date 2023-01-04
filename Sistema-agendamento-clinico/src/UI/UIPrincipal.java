@@ -54,7 +54,8 @@ public class UIPrincipal extends javax.swing.JFrame {
         btnVerifiacrConsultasDia = new javax.swing.JMenuItem();
         btnVerificarConsultasPaciente = new javax.swing.JMenuItem();
         btnVerificarConsultasMedico = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        btnPagarConsulta = new javax.swing.JMenuItem();
+        bntHistorico = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -140,13 +141,21 @@ public class UIPrincipal extends javax.swing.JFrame {
 
         menuConsultas.add(menuVerificarConsultas);
 
-        jMenuItem1.setText("Pagar Consulta");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        btnPagarConsulta.setText("Pagar Consulta");
+        btnPagarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                btnPagarConsultaActionPerformed(evt);
             }
         });
-        menuConsultas.add(jMenuItem1);
+        menuConsultas.add(btnPagarConsulta);
+
+        bntHistorico.setText("Histórico");
+        bntHistorico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntHistoricoActionPerformed(evt);
+            }
+        });
+        menuConsultas.add(bntHistorico);
 
         jMenuBar1.add(menuConsultas);
 
@@ -270,7 +279,7 @@ public class UIPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnVerificarConsultasMedicoActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void btnPagarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagarConsultaActionPerformed
         if (this.usuarioLogin instanceof Secretario){
             java.awt.EventQueue.invokeLater(() -> {
                 UIPagarConsulta dialog = new UIPagarConsulta(new javax.swing.JFrame(), true);
@@ -279,7 +288,19 @@ public class UIPrincipal extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
         }
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_btnPagarConsultaActionPerformed
+
+    private void bntHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntHistoricoActionPerformed
+        if (this.usuarioLogin instanceof Secretario){
+            java.awt.EventQueue.invokeLater(() -> {
+                UIHistoricoConsultas dialog = new UIHistoricoConsultas(new javax.swing.JFrame(), true, (Secretario) this.usuarioLogin);
+                dialog.setVisible(true);
+            });
+        } else {
+            JOptionPane.showMessageDialog(null,"Usuário não autorizado para utilizar esta função!");
+        }
+       
+    }//GEN-LAST:event_bntHistoricoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,16 +336,17 @@ public class UIPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem bntHistorico;
     private javax.swing.JMenuItem btnAssociarSecretarioMedico;
     private javax.swing.JMenuItem btnCancelarConsulta;
     private javax.swing.JMenuItem btnConfirmarConsulta;
     private javax.swing.JMenuItem btnNovaConsulta;
     private javax.swing.JMenuItem btnNovoUsuario;
+    private javax.swing.JMenuItem btnPagarConsulta;
     private javax.swing.JMenuItem btnVerifiacrConsultasDia;
     private javax.swing.JMenuItem btnVerificarConsultasMedico;
     private javax.swing.JMenuItem btnVerificarConsultasPaciente;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu menuConsultas;
     private javax.swing.JMenu menuUsuario;
     private javax.swing.JMenu menuVerificarConsultas;

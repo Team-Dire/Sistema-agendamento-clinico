@@ -146,4 +146,34 @@ public class ControladorConsulta {
         
         return false;
     }
+    
+    public static ArrayList<Consulta> getConsultasMedicoPeriodo(String nomeMedico, Secretario secre, String periodo){
+        
+        ArrayList<Consulta> consultasGeral = ControladorConsulta.getConsultasMedico(nomeMedico, secre);
+        ArrayList<Consulta> consultaPeriodo = new ArrayList<>();
+        
+        Calendar periodoAnterior = Calendar.getInstance();
+        
+        switch (periodo){
+            case "1 mês" -> {
+                periodoAnterior.add(Calendar.MONTH, -1);
+            }
+            case "3 meses" -> {
+                periodoAnterior.add(Calendar.MONTH, -3);
+            }
+            case "1 ano" -> {
+                periodoAnterior.add(Calendar.YEAR, -1);
+            }
+        }
+        
+        for (Consulta cons : consultasGeral) {
+            Calendar dataCons = Calendar.getInstance();
+            dataCons.setTime(cons.getHorario());
+            if (dataCons.compareTo(periodoAnterior) > 0){
+                consultaPeriodo.add(cons);
+            }
+        }
+        
+        return consultaPeriodo;
+    }
 }
