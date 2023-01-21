@@ -321,7 +321,7 @@ Linha 4. O horário informado não está de acordo com as regras estabelecidas n
 | Secretário | Software |
 | --- | --- |
 | 1. O secretário executa o software | |
-| 2. O secretário informa o nome do paciente e o horário atual da consulta. | 3. O software retorna a consulta. |
+| 2. O secretário informa o nome do paciente e o horário marcado da consulta | 3. O software retorna a consulta. |
 | 4. O secretário informa o horário que iniciou e/ou finalizou a consulta. | 5. O software registra a ocorrência da consulta. |
 
 **Sequência alternativa:**: Linha 4. O horário final informado é anterior ao horário inicial. O software retorna um erro.
