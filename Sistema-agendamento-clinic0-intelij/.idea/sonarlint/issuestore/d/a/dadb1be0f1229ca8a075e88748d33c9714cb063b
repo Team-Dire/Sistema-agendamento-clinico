@@ -1,30 +1,0 @@
-
-C
-java:S16047"(Make this anonymous inner class a lambda(´’€­ıÿÿÿÿ
-C
-java:S1604B"(Make this anonymous inner class a lambda(Ã°º¹ûÿÿÿÿ
-w
-java:S1450Ç"[Remove the "btnConfirmar" field and declare it as a local variable in the relevant methods.(¹•¤Êúÿÿÿÿ
-r
-java:S1450Í"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
-z
-java:S1450Î"cRemove the "labelMetodoPagamento" field and declare it as a local variable in the relevant methods.(œ«“ç
-|
-java:S1450Ï"`Remove the "labelNomePaciente" field and declare it as a local variable in the relevant methods.(å¦ı­ıÿÿÿÿ
-}
-java:S1450Ğ"aRemove the "labelTipoPagamento" field and declare it as a local variable in the relevant methods.(ñáéõıÿÿÿÿ
-x
-java:S1450Ñ"aRemove the "labelValorConsulta" field and declare it as a local variable in the relevant methods.(ƒ¹„
-A
-java:S1172‰"*Remove this unused method parameter "evt".(Éş–­
-d
-java:S5361‹"HReplace this call to "replaceAll()" by a call to the "replace()" method.(ùÛá€şÿÿÿÿ
-8	java:S131£""Add a default case to this switch.(áóƒÑ
-3
-java:S6205¤"Remove this redundant block.(ÇÓ„•
-8
-java:S6205§"Remove this redundant block.(ò÷Ñäÿÿÿÿÿ
-8
-java:S6205ª"Remove this redundant block.(€ø¥ÿÿÿÿÿ
-F
-java:S1172¹"*Remove this unused method parameter "evt".(ëêŸÁøÿÿÿÿ
