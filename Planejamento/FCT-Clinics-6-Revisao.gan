@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="FCT-Clinics" company="" webLink="" view-date="2022-12-07" view-index="0" gantt-divider-location="313" resource-divider-location="300" version="3.2.3247" locale="pt_BR">
+<?xml version="1.0" encoding="UTF-8"?><project name="FCT-Clinics" company="" webLink="" view-date="2023-01-14" view-index="0" gantt-divider-location="299" resource-divider-location="300" version="3.2.3247" locale="pt_BR">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="166" order="0"/>
-        <field id="tpd4" name="Data inicial" width="65" order="1"/>
-        <field id="tpd5" name="Data final" width="66" order="2"/>
+        <field id="tpd3" name="Nome" width="158" order="0"/>
+        <field id="tpd4" name="Data inicial" width="62" order="1"/>
+        <field id="tpd5" name="Data final" width="63" order="2"/>
         <option id="filter.completedTasks" value="false"/>
     </view>
     <view id="resource-table">
@@ -88,10 +88,10 @@
         <task id="15" name="Teste do projeto" color="#8cb6ce" meeting="false" start="2023-01-30" duration="1" complete="100" thirdDate="2022-11-15" thirdDate-constraint="0" expand="true">
             <depend id="16" type="2" difference="-1" hardness="Strong"/>
         </task>
-        <task id="16" name="Implementação das férias e encaixes" color="#8cb6ce" meeting="false" start="2023-01-30" duration="2" complete="50" thirdDate="2022-11-15" thirdDate-constraint="0" expand="true">
+        <task id="16" name="Implementação das férias e encaixes" color="#8cb6ce" meeting="false" start="2023-01-30" duration="2" complete="100" thirdDate="2022-11-15" thirdDate-constraint="0" expand="true">
             <depend id="17" type="1" difference="1" hardness="Strong"/>
         </task>
-        <task id="17" name="Teste da implementação" color="#8cb6ce" meeting="false" start="2023-01-31" duration="1" complete="0" thirdDate="2023-01-08" thirdDate-constraint="0" expand="true"/>
+        <task id="17" name="Teste da implementação" color="#8cb6ce" meeting="false" start="2023-01-31" duration="1" complete="100" thirdDate="2023-01-08" thirdDate-constraint="0" expand="true"/>
     </tasks>
     <resources>
         <resource id="0" name="Gustavo Becelli" function="1" contacts="" phone=""/>
