@@ -171,4 +171,18 @@ public class ControladorConsulta {
         
         return consultaPeriodo;
     }
+    
+    public static Boolean adiarConsulta(String nomePaciente, String cpfpaciente, String nomeMedico, Date horario){
+        //cancela
+        if (!ControladorConsulta.cancela(nomePaciente, horario)){
+            return false;
+        }
+        
+        //reagenda        
+        if (!ControladorConsulta.add(nomePaciente, cpfpaciente, nomeMedico, horario)){
+            return false;
+        }
+        
+        return true;        
+    }
 }

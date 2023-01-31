@@ -1,0 +1,37 @@
+
+c
+java:S1192L"HDefine a constant instead of duplicating this literal "MÃ©dico" 3 times.(–Şëşşÿÿÿÿ
+C
+java:S1604M"(Make this anonymous inner class a lambda(¬¼¾üÿÿÿÿ
+>
+java:S1604Y"(Make this anonymous inner class a lambda(ò”±ò
+E
+java:S5411o"*Use the primitive boolean expression here.(¸µºüÿÿÿÿ
+A
+java:S5411ƒ"*Use the primitive boolean expression here.(Ôº†«
+w
+java:S1450™"[Remove the "btnRegistrar" field and declare it as a local variable in the relevant methods.(¶üÌ¸ÿÿÿÿÿ
+o
+java:S1450 "XRemove the "labbelCPF" field and declare it as a local variable in the relevant methods.(¾­³Ó
+q
+java:S1450¡"ZRemove the "labbelSenha" field and declare it as a local variable in the relevant methods.(Íâƒ
+‚
+java:S1450¢"fRemove the "labelCamposObrigatorios" field and declare it as a local variable in the relevant methods.(ÓÜô½ıÿÿÿÿ
+y
+java:S1450£"bRemove the "labelConfirmarSenha" field and declare it as a local variable in the relevant methods.(Ø”ëÅ
+
+java:S1450¤"hRemove the "labelEspecializacaoMedico" field and declare it as a local variable in the relevant methods.(„Åİ
+o
+java:S1450¥"XRemove the "labelNome" field and declare it as a local variable in the relevant methods.(Íöğˆ
+v
+java:S1450¦"_Remove the "labelTipoUsuario" field and declare it as a local variable in the relevant methods.(¬úûÊ
+@
+java:S1172g"*Remove this unused method parameter "evt".(¤€¢Í
+u
+java:S2159t"ZRemove this call to "equals"; comparisons between an array and a type always return false.(‚ëªûüÿÿÿÿ
+u
+java:S2159t"ZRemove this call to "equals"; comparisons between an array and a type always return false.(‚ëªûüÿÿÿÿ
+F
+java:S1172Œ"*Remove this unused method parameter "evt".(¹È¢–şÿÿÿÿ
+F
+java:S1905«"0Remove this unnecessary cast to "Administrador".(ÈÛE

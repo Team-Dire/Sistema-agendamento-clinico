@@ -58,7 +58,7 @@
             </MenuItem>
             <Menu class="javax.swing.JMenu" name="menuVerificarConsultas">
               <Properties>
-                <Property name="text" type="java.lang.String" value="VerificarConsultas"/>
+                <Property name="text" type="java.lang.String" value="Verificar Consultas"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="btnVerifiacrConsultasDia">
@@ -101,6 +101,14 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bntHistoricoActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="btnAdiarConsulta">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Adiar Consulta"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdiarConsultaActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>

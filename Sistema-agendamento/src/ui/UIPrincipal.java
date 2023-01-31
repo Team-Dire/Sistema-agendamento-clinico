@@ -56,14 +56,13 @@ public class UIPrincipal extends javax.swing.JFrame {
         btnVerificarConsultasMedico = new javax.swing.JMenuItem();
         btnPagarConsulta = new javax.swing.JMenuItem();
         bntHistorico = new javax.swing.JMenuItem();
+        btnAdiarConsulta = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
-            @Override
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
             }
-            @Override
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
@@ -91,7 +90,7 @@ public class UIPrincipal extends javax.swing.JFrame {
 
         menuConsultas.setText("Consultas");
 
-        btnConfirmarConsulta.setText("Confirmar Consulta");
+        btnConfirmarConsulta.setText("Confirmar consulta");
         btnConfirmarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConfirmarConsultaActionPerformed(evt);
@@ -99,7 +98,7 @@ public class UIPrincipal extends javax.swing.JFrame {
         });
         menuConsultas.add(btnConfirmarConsulta);
 
-        btnNovaConsulta.setText("Nova Consulta");
+        btnNovaConsulta.setText("Nova consulta");
         btnNovaConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNovaConsultaActionPerformed(evt);
@@ -107,7 +106,7 @@ public class UIPrincipal extends javax.swing.JFrame {
         });
         menuConsultas.add(btnNovaConsulta);
 
-        btnCancelarConsulta.setText("Cancelar Consulta");
+        btnCancelarConsulta.setText("Cancelar consulta");
         btnCancelarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarConsultaActionPerformed(evt);
@@ -115,7 +114,7 @@ public class UIPrincipal extends javax.swing.JFrame {
         });
         menuConsultas.add(btnCancelarConsulta);
 
-        menuVerificarConsultas.setText("VerificarConsultas");
+        menuVerificarConsultas.setText("Verificar Consultas");
 
         btnVerifiacrConsultasDia.setText("Do dia");
         btnVerifiacrConsultasDia.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +142,7 @@ public class UIPrincipal extends javax.swing.JFrame {
 
         menuConsultas.add(menuVerificarConsultas);
 
-        btnPagarConsulta.setText("Pagar Consulta");
+        btnPagarConsulta.setText("Pagar consulta");
         btnPagarConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPagarConsultaActionPerformed(evt);
@@ -158,6 +157,14 @@ public class UIPrincipal extends javax.swing.JFrame {
             }
         });
         menuConsultas.add(bntHistorico);
+
+        btnAdiarConsulta.setText("Adiar Consulta");
+        btnAdiarConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdiarConsultaActionPerformed(evt);
+            }
+        });
+        menuConsultas.add(btnAdiarConsulta);
 
         jMenuBar1.add(menuConsultas);
 
@@ -304,6 +311,13 @@ public class UIPrincipal extends javax.swing.JFrame {
        
     }//GEN-LAST:event_bntHistoricoActionPerformed
 
+    private void btnAdiarConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdiarConsultaActionPerformed
+        java.awt.EventQueue.invokeLater(() -> {
+            UIAdiarConsultas dialog = new UIAdiarConsultas(new javax.swing.JFrame(), true);
+            dialog.setVisible(true);
+        });
+    }//GEN-LAST:event_btnAdiarConsultaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -339,6 +353,7 @@ public class UIPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem bntHistorico;
+    private javax.swing.JMenuItem btnAdiarConsulta;
     private javax.swing.JMenuItem btnAssociarSecretarioMedico;
     private javax.swing.JMenuItem btnCancelarConsulta;
     private javax.swing.JMenuItem btnConfirmarConsulta;

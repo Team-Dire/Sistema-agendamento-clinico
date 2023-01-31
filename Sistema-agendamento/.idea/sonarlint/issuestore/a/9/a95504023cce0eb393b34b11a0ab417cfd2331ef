@@ -1,0 +1,25 @@
+
+g	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚúâÚ
+C
+java:S1604F"(Make this anonymous inner class a lambda(é¹œŠøÿÿÿÿ
+p
+java:S1450°"YRemove the "btnAgendar" field and declare it as a local variable in the relevant methods.(¬ÜÈ·
+r
+java:S1450´"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
+r
+java:S1450µ"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ
+w
+java:S1450¶"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ
+v
+java:S1450·"_Remove the "labelCPFPaciente" field and declare it as a local variable in the relevant methods.(Ù—ïŠ
+r
+java:S1450¸"[Remove the "labelHorario" field and declare it as a local variable in the relevant methods.(ş™Â‚
+|
+java:S1450¹"`Remove the "labelNomePaciente" field and declare it as a local variable in the relevant methods.(å¦ı­ıÿÿÿÿ
+U
+java:S11616":Add the "@Override" annotation above this method signature(‚Óˆüÿÿÿÿ
+F
+java:S1172†"*Remove this unused method parameter "evt".(½Ğùÿÿÿÿ
+?	java:S108•")Either remove or fill this block of code.(İŠÊ³
+A
+java:S1172Ÿ"*Remove this unused method parameter "evt".(åŸü…

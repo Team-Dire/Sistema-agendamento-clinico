@@ -1,0 +1,30 @@
+
+o
+java:S1192‰"QDefine a constant instead of duplicating this literal "dd/MM/yyyy HH:mm" 3 times.(·¡Ê8‡ÂßÍà0
+J
+java:S16044"(Make this anonymous inner class a lambda(é¹œŠøÿÿÿÿ8ŠÂßÍà0
+J
+java:S1604V"(Make this anonymous inner class a lambda(¬­­„üÿÿÿÿ8‹ÂßÍà0
+M
+java:S5411"*Use the primitive boolean expression here.(”°÷ÿüÿÿÿÿ8ÂßÍà0
+w
+java:S1450¿"YRemove the "btnAgendar" field and declare it as a local variable in the relevant methods.(¬ÜÈ·8àÂßÍà0
+{
+java:S1450À"XRemove the "btnEditar" field and declare it as a local variable in the relevant methods.(”¦Íÿÿÿÿÿ8áÂßÍà0
+~
+java:S1450Â"[Remove the "jScrollPane2" field and declare it as a local variable in the relevant methods.(ŠÌ«·şÿÿÿÿ8†‹ËÍà0
+y
+java:S1450Ã"[Remove the "labelHorario" field and declare it as a local variable in the relevant methods.(ş™Â‚8”‹ËÍà0
+\
+java:S1161,":Add the "@Override" annotation above this method signature(‚Óˆüÿÿÿÿ8ùÂßÍà0
+\
+java:S1161K":Add the "@Override" annotation above this method signature(ÍŸÏ†ùÿÿÿÿ8„ÃßÍà0
+W
+java:S1161O":Add the "@Override" annotation above this method signature(®¸ù8†ÃßÍà0
+H
+java:S1172…"*Remove this unused method parameter "evt".(åŸü…8œÃßÍà0
+M
+java:S1172”"*Remove this unused method parameter "evt".(½Ğùÿÿÿÿ8§ÃßÍà0
+F	java:S108¡")Either remove or fill this block of code.(İŠÊ³8°ÃßÍà0
+M
+java:S1172«"*Remove this unused method parameter "evt".(Œ¨¨Òûÿÿÿÿ8·ÃßÍà0

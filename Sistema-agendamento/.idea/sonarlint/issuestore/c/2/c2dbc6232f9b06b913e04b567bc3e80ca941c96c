@@ -1,0 +1,22 @@
+
+C
+java:S1604M"(Make this anonymous inner class a lambda(Ã°º¹ûÿÿÿÿ
+F
+java:S5411•"*Use the primitive boolean expression here.(”°÷ÿüÿÿÿÿ
+w
+java:S1450œ"[Remove the "btnConfirmar" field and declare it as a local variable in the relevant methods.(¹•¤Êúÿÿÿÿ
+w
+java:S1450"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ
+t
+java:S1450"]Remove the "labelConsultas" field and declare it as a local variable in the relevant methods.(È®
+U
+java:S1161,":Add the "@Override" annotation above this method signature(‚Óˆüÿÿÿÿ
+U
+java:S1161B":Add the "@Override" annotation above this method signature(ÍŸÏ†ùÿÿÿÿ
+P
+java:S1161F":Add the "@Override" annotation above this method signature(®¸ù
+@
+java:S1172r"*Remove this unused method parameter "evt".(Éş–­
+?	java:S108")Either remove or fill this block of code.(İŠÊ³
+A
+java:S1172‹"*Remove this unused method parameter "evt".(åŸü…

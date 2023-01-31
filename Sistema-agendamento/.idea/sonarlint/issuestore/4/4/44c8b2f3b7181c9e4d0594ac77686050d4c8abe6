@@ -1,0 +1,103 @@
+
+š
+java:S1192Í"wDefine a constant instead of duplicating this literal "UsuÃ¡rio nÃ£o autorizado para utilizar esta funÃ§Ã£o!" 10 times.(ÍƒÇ÷ùÿÿÿÿ8’¾‚Íà0
+J
+java:S1604J"(Make this anonymous inner class a lambda(½ã–şÿÿÿÿ8¾‚Íà0
+J
+java:S1604R"(Make this anonymous inner class a lambda(¬úäóÿÿÿÿÿ8¡¾‚Íà0
+J
+java:S1604^"(Make this anonymous inner class a lambda(·çóüÿÿÿÿ8§¾‚Íà0
+J
+java:S1604f"(Make this anonymous inner class a lambda(¯ò¥õøÿÿÿÿ8¨¾‚Íà0
+J
+java:S1604n"(Make this anonymous inner class a lambda(–ÎËøÿÿÿÿ8©¾‚Íà0
+E
+java:S1604x"(Make this anonymous inner class a lambda(Üµ´¨8©¾‚Íà0
+K
+java:S1604€"(Make this anonymous inner class a lambda(ú°¨‚ıÿÿÿÿ8«¾‚Íà0
+F
+java:S1604ˆ"(Make this anonymous inner class a lambda(ŞÀµÎ8®¾‚Íà0
+F
+java:S1604’"(Make this anonymous inner class a lambda( ¦ŠÍ8®¾‚Íà0
+K
+java:S1604š"(Make this anonymous inner class a lambda(ç¤Ÿ«ûÿÿÿÿ8°¾‚Íà0
+F
+java:S1604¢"(Make this anonymous inner class a lambda(é†™ã8±¾‚Íà0
+M
+java:S5411¿"*Use the primitive boolean expression here.(“üàáşÿÿÿÿ8¶¾‚Íà0
+M
+java:S5411"*Use the primitive boolean expression here.(”°÷ÿüÿÿÿÿ8Û¶åÌà0
+~
+java:S1450ã"[Remove the "bntHistorico" field and declare it as a local variable in the relevant methods.(òÚ…¿üÿÿÿÿ8Á¿‚Íà0
+‚
+java:S1450ä"_Remove the "btnAdiarConsulta" field and declare it as a local variable in the relevant methods.(ô¿÷¬şÿÿÿÿ8Ã¿‚Íà0
+
+java:S1450å"jRemove the "btnAssociarSecretarioMedico" field and declare it as a local variable in the relevant methods.(äè÷Öıÿÿÿÿ8ï·åÌà0
+
+java:S1450æ"bRemove the "btnCancelarConsulta" field and declare it as a local variable in the relevant methods.(“â]8ø·åÌà0
+†
+java:S1450ç"cRemove the "btnConfirmarConsulta" field and declare it as a local variable in the relevant methods.(ñİş¶ûÿÿÿÿ8ú·åÌà0
+
+java:S1450è"^Remove the "btnNovaConsulta" field and declare it as a local variable in the relevant methods.(è¼Õøÿÿÿÿ8ş·åÌà0
+{
+java:S1450é"]Remove the "btnNovoUsuario" field and declare it as a local variable in the relevant methods.(Ì›×Ş8‚¸åÌà0
+}
+java:S1450ê"_Remove the "btnPagarConsulta" field and declare it as a local variable in the relevant methods.(·êõÿ8ƒ¸åÌà0
+…
+java:S1450ë"gRemove the "btnVerifiacrConsultasDia" field and declare it as a local variable in the relevant methods.(–ƒ¥á8…¸åÌà0
+
+java:S1450ì"jRemove the "btnVerificarConsultasMedico" field and declare it as a local variable in the relevant methods.(©ûÚûÿÿÿÿ8ˆ¸åÌà0
+
+java:S1450í"lRemove the "btnVerificarConsultasPaciente" field and declare it as a local variable in the relevant methods.(ãŸšâùÿÿÿÿ8Š¸åÌà0
+{
+java:S1450î"XRemove the "jMenuBar1" field and declare it as a local variable in the relevant methods.(úıÁ›ÿÿÿÿÿ8‹¸åÌà0
+z
+java:S1450ï"\Remove the "menuConsultas" field and declare it as a local variable in the relevant methods.(Ôö‹º8‹¸åÌà0
+w
+java:S1450ğ"ZRemove the "menuUsuario" field and declare it as a local variable in the relevant methods.(ëÚ8Œ¸åÌà0
+ƒ
+java:S1450ñ"eRemove the "menuVerificarConsultas" field and declare it as a local variable in the relevant methods.(‰Ú”Ù8—¸åÌà0
+\
+java:S1161?":Add the "@Override" annotation above this method signature(¦³±ÿÿÿÿÿ8å¿‚Íà0
+W
+java:S1161B":Add the "@Override" annotation above this method signature(œúüæ8ç¿‚Íà0
+M
+java:S1172»"*Remove this unused method parameter "evt".(÷Ü¦ßúÿÿÿÿ8‘À‚Íà0
+M
+java:S1172Æ"*Remove this unused method parameter "evt".(—‰€üüÿÿÿÿ8±À‚Íà0
+H
+java:S1172Ñ"*Remove this unused method parameter "evt".(ØÓ»’8µÀ‚Íà0
+H
+java:S1172Ü"*Remove this unused method parameter "evt".(¿™ĞĞ8½À‚Íà0
+G
+java:S1172ç"*Remove this unused method parameter "evt".(³à¿h8ÀÀ‚Íà0
+M
+java:S1172ì"*Remove this unused method parameter "evt".(šÎØşÿÿÿÿ8ÄÀ‚Íà0
+H
+java:S1172÷"*Remove this unused method parameter "evt".(¢‡Ü×8ÉÀ‚Íà0
+H
+java:S1172‚"*Remove this unused method parameter "evt".(Öñ¯•8ÎÀ‚Íà0
+H
+java:S1172"*Remove this unused method parameter "evt".(¾—¬8ÒÀ‚Íà0
+M
+java:S1172˜"*Remove this unused method parameter "evt".(øíËÏÿÿÿÿÿ8ØÀ‚Íà0
+l
+java:S6201™"NReplace this instanceof check and cast with 'instanceof Secretario secretario'(Ğ†“‹8ÙÀ‚Íà0
+H
+java:S1172£"*Remove this unused method parameter "evt".(Ÿ·ƒ8İÀ‚Íà0
+H
+java:S1172®"*Remove this unused method parameter "evt".(ùáëò8ãÀ‚Íà0
+l
+java:S6201¯"NReplace this instanceof check and cast with 'instanceof Secretario secretario'(Ğ†“‹8åÀ‚Íà0
+H
+java:S1172º"*Remove this unused method parameter "evt".(£§Ü8ëÀ‚Íà0
+M
+java:S1197Ä"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ8òÀ‚Íà0
+c
+java:S2147Ó"ECombine this catch with the one at line 337, which has the same body.(¨¦Š½8óÀ‚Íà0
+c
+java:S2147Õ"ECombine this catch with the one at line 337, which has the same body.(ã€ 8ôÀ‚Íà0
+b
+java:S2147×"ECombine this catch with the one at line 337, which has the same body.(ñÎ¯%8õÀ‚Íà0
+J
+java:S1602İ",Remove useless curly braces around statement(¤çšÜ8ûÀ‚Íà0
